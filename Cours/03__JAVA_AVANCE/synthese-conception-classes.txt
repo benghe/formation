@@ -1,0 +1,23 @@
+Affichage (console / HTML)
+	Classes affichage
+
+Sauvegarde (SQL, fichier, Hibernate)
+	Classes sauvegarde
+
+Modèle (classes mirroir de ce qu'il se passe en base de données == description)
+	Classes modèles
+----------------------------------------
+
+Services (fonctions disponibles partout dans l'application)
+	Intermédiaire entre les classes affichage & classes sauvegarde
+	Si à la sauvegarde, on veut faire des vérifs
+	ET qu'en plus, on peut sauvegarde à partir de plusieurs affichage
+
+-------------------------------------
+
+MVC	(Model - View - Controller)
+Classes Modèles
+Classes Affichage (Vue)
+Classes Controller (intermédiaire entre vue et le modèle)
++ Classes Sauvegarde (DAO - Data Access Object | Repository - intermédiaire en JAVA et SQL)
++ Classes Service (intermédiaire entre controller et les classes de sauvegarde)

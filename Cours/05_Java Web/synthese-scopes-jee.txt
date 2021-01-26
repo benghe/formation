@@ -1,0 +1,30 @@
+SCOPE : endroit pour stocker de l'information dans notre projet JEE
+
+APPLICATION :
+- Créé au démarrage du serveur
+- Détruit à l'arrêt du serveur
+- Variable dispo jusqu'à l'arrêt du serveur
+- Variable dispo et identique pour tous les utilisateurs
+- Accès via le contexte de Servlet (this.getServletContext().setAttribute("", ""))
+
+
+SESSION :
+- Créé au démarrage d'une session utilisateur
+- Détruit à la fin d'une session utilisateur
+- Variable dispo jusqu'à la fin de la session utilisateur
+- Variable pour UNE session utilisateur
+- Accès via la session (req.getSession().setAttribute("", ""))
+
+
+REQUEST
+- Créé à la réception d'une requête HTTP
+- Détruit une fois la réponse HTTP envoyée
+- Variable dispo jusqu'à la fin de la requête (jusqu'à ce que la réponse soit envoyée)
+- Variable pour UNE requête
+- Accès via la requête (req.setAttribute("", ""))
+
+
+VIEW
+- Créé pour une vue (JSP)
+- Détruit à la fin de la vue
+- Variable pour UNE vue, voire UN morceau de la vue

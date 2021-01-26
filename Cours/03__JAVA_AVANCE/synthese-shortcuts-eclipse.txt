@@ -1,0 +1,9 @@
+Commenter / Décommenter				Ctrl+Shift+/
+Génération getters / setters				Shift+Alt+S ... R
+Importer / désimporter les classes			Ctrl+Shift+O
+Refactoring des noms de variables / noms de méthode	Alt+Shift+R
+Naviguation entre classes / interfaces / méthodes		Ctrl+Click
+Références à une méthode / classe / interface		Ctrl+Shift+G
+Autocomplétion					Ctrl+Espace
+Dupliquer						Ctrl+Alt+Fleche dir.
+Déplacer						Alt+Flèche dir.
