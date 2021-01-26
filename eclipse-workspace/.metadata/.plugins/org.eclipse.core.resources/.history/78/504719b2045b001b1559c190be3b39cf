@@ -1,0 +1,30 @@
+package fr.formation.science;
+
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
+
+public class MathsTest {
+	//TEST UNITAIRES
+	//ISOLES - INDEPENDANTS LES UNS DES AUTRES
+	//LES PLUS SIMPLES POSSIBLES
+	
+	//CHAQUE TEST UNITAIRE EST UNE METHODE QUI NE RENVOIE RIEN DU TOUT
+	//NOM TEST UNITAIRE = NOM DE LA METHODE
+	
+	//POUR TESTER, UTILISATION DES ASSERTIONS
+	
+	@Test
+	public void shouldReturn2() {
+		Maths maths = new Maths();
+		assertEquals(2, maths.addition(1, 1));
+		
+	}
+	
+	@Test
+	public void shouldReturn5() {
+		Maths maths = new Maths();
+		assertEquals(2, maths.addition(2, 3));
+		
+	}
+}

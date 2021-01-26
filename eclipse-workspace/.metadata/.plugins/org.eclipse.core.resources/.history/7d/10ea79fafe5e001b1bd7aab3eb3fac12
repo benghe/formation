@@ -1,0 +1,41 @@
+package fr.formation.servlet;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet(value = "/home" , loadOnStartup=1)
+public class HomeServlet extends HttpServlet{
+	
+	//La commande GET
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		// Dans l'objet HttpServletRequest, on a tout ce qui concerne la requête HTTP
+			//les param URL, param dans le corps de la requête
+			//Les cookies
+			//La session utilisateur
+			
+			//Dans l'objet HttpServletResponse on a tout ce qui va concerer la réponse HTTP:
+			// Contenu(HTML CSS, blabla)
+			// status particulier? (redirection... 30x)
+			
+			String monUsername=req.getParameter("username");
+		
+			
+			resp.getWriter().println("Hello le monde");
+			resp.getWriter().println("Hello " + monUsername);
+	}
+	
+	
+	//La méthode service qui prend n'importe quelle commande HTTP
+//	@Override
+//	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+//		// TODO Auto-generated method stub
+//		super.service(req, resp);
+//	}
+	
+}

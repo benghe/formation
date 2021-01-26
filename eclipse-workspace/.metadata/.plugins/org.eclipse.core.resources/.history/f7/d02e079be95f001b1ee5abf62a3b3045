@@ -1,0 +1,31 @@
+package fr.formation.listener;
+
+import java.util.ArrayList;
+
+import javax.servlet.ServletContextEvent;
+import javax.servlet.ServletContextListener;
+import javax.servlet.annotation.WebListener;
+
+import fr.formation.model.Fournisseur;
+import fr.formation.model.Produit;
+
+@WebListener
+public class FournisseurInitListener implements ServletContextListener{
+
+	@Override
+	public void contextInitialized(ServletContextEvent sce) {
+
+		
+		ArrayList<Fournisseur> maListedeFournisseursInit = new ArrayList<Fournisseur>();
+		
+		Fournisseur amazon = new Fournisseur("Amazon");
+		Fournisseur decathlon = new Fournisseur("Decathlon");
+		Fournisseur gosport = new Fournisseur("GO Sport");
+		
+		maListedeFournisseursInit.add(amazon);
+		maListedeFournisseursInit.add(decathlon);
+		maListedeFournisseursInit.add(gosport);
+		
+		sce.getServletContext().setAttribute("listeFournisseursInit", maListedeFournisseursInit);
+	}
+}

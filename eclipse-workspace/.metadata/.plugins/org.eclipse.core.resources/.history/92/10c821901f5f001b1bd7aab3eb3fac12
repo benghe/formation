@@ -1,0 +1,29 @@
+package fr.formation.servlet;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+@WebServlet(value = "/produits" , loadOnStartup=3)
+public class ProduitServlet extends HttpServlet{
+
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+	
+	
+		
+	
+	}
+	
+	
+	
+	
+	
+
+}

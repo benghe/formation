@@ -1,0 +1,8 @@
+package fr.formation.servlet;
+
+import javax.servlet.annotation.WebServlet;
+
+@WebServlet(value = "/fournisseur-ajout")
+public class FournisseurAjoutServlet {
+
+}

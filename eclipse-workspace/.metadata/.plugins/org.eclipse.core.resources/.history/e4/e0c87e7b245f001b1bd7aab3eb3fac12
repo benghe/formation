@@ -1,0 +1,20 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Liste des produits</title>
+	</head>
+
+
+	<body>
+		
+		<c:forEach var="produit" items="${ mesProduits }">
+			<p>	${ produit.getNom() } </p>
+			<p>	${ produit.nom } </p> <!-- Transforme en getNom() grâce aux conventions de nomage -->
+		</c:forEach>
+		
+		
+		
+	</body>
+</html>

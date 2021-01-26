@@ -1,0 +1,25 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Liste des fournisseurs</title>
+	</head>
+
+
+	<body>
+		<h3>Liste des fournisseurs</h3>
+		
+		<c:forEach var="produit" items="${ applicationScope['listeProduitsInit'] }" varStatus="produitStatus">
+			<%-- <p>	${ produit.getNom() } </p> --%>
+			<p>	${ produitStatus.index } - ${ produit.nom } 
+			
+						
+				<a href="produit-retrait?id=${ produitStatus.index }"> Retirer le fournisseur</a>
+			</p> <!-- Transforme en getNom() grâce aux conventions de nommage -->
+		</c:forEach>
+		
+		
+		
+	</body>
+</html>

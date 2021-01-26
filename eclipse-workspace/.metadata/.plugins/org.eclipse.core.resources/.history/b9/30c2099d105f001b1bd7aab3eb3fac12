@@ -1,0 +1,15 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bienvenue</title>
+	</head>
+
+
+	<body>
+		<p>Coucou à tousssssssssssss</p>
+		<p>Bonjour ${ utilisateur }</p>
+		<p>EXPRESSION : ${ 5+89 }</p>
+
+	</body>
+</html>

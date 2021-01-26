@@ -1,0 +1,5 @@
+package fr.formation.listener;
+
+public class ProduitInitListener {
+
+}

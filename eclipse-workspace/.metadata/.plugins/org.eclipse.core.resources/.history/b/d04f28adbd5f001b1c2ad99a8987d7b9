@@ -1,0 +1,56 @@
+package fr.formation.servlet;
+
+import java.io.IOException;
+import java.util.ArrayList;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import fr.formation.model.Produit;
+
+@WebServlet(value = "/produit-ajout" , loadOnStartup=4)
+public class ProduitAjoutServlet extends HttpServlet{
+
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		
+		
+		this.getServletContext() //On récupère le contexte de Servlet
+		.getRequestDispatcher("/WEB-INF/views/produit-ajout.jsp") //On récupère le dispatcher
+		.forward(req, resp); // On transfert avec request et response
+		
+	}
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		String nomDuProduit=req.getParameter("addProductName");
+		System.out.println(nomDuProduit);
+		
+		
+		Produit nouveau = new Produit(nomDuProduit);
+		
+		ArrayList<Produit> ListeAugmentee = new ArrayList<Produit>();
+		
+		
+		
+		ListeAugmentee=(ArrayList<Produit>) this.getServletContext().getAttribute("listeProduitsInit");
+		
+		ListeAugmentee.add(nouveau);
+		
+		
+		this.getServletContext().setAttribute("listeProduitsInit", ListeAugmentee);
+	
+
+		
+		resp.sendRedirect("produits");
+		
+	}
+	
+	
+
+}

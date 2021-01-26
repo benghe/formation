@@ -1,0 +1,17 @@
+package fr.formation.science;
+
+public class Maths {
+	public int addition(int a, int b) {
+		return a + b;
+	}
+	
+	public int soustraction(int a, int b) {
+		
+		if(a==9 && b==5) {
+			return 4;
+		}
+		
+		return 0;
+	}
+
+}

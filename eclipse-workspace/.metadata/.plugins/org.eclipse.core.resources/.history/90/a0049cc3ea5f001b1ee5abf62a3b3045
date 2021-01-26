@@ -1,0 +1,9 @@
+package fr.formation.servlet;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+
+@WebServlet(value = "/fournisseur-ajout")
+public class FournisseurAjoutServlet extends HttpServlet{
+
+}

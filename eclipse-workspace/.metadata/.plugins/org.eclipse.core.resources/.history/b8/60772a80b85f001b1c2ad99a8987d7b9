@@ -1,0 +1,44 @@
+package fr.formation.servlet;
+
+import java.io.IOException;
+import java.util.ArrayList;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import fr.formation.model.Produit;
+
+@WebServlet(loadOnStartup=1)
+public class InitServlet extends HttpServlet{
+
+	
+	
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+		ArrayList<Produit> maListedeProduitsInit = new ArrayList<Produit>();
+		
+		Produit parachute = new Produit("Parachute");
+		Produit voile = new Produit("Voile");
+		
+		maListedeProduitsInit.add(parachute);
+		maListedeProduitsInit.add(voile);
+		
+		this.getServletContext().setAttribute("listeProduitsInit", maListedeProduitsInit);
+		
+		
+		
+//		this.getServletContext() //On récupère le contexte de Servlet
+//		.getRequestDispatcher("/WEB-INF/views/init.jsp") //On récupère le dispatcher
+//		.forward(req, resp); // On transfert avec request et response
+//		
+//		
+	}
+
+	
+	
+	
+}

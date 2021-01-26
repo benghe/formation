@@ -1,0 +1,196 @@
+/*EXERCICE 1*/
+
+/*
+
+.produits, .clients{}
+
+table.produits{}
+
+div p [id="accueil"]{}
+
+div + p [id="contact"]{}
+
+form input [type="text"]{}
+
+*/
+
+
+/*correction*/
+
+/*
+
+.produits, .clients{}
+table.produits{}
+div#accueil p{}
+
+*/
+/*
+#contact > p{} /*(pas div car identifiant unique)*/
+
+/*
+form input[type="text"]{}
+form input[type="chackbox"] + label{}
+input.special[type="checkbox"] + label{}
+a:hover{}
+input[type="text"]:focus{}
+p.rouge.arrondi{}
+*/
+
+nav a{
+    color: black;
+    text-decoration: none;
+}
+
+nav a::after{
+    content:"";
+    display: block;
+    width: 0px;
+    height:4px;
+    background: black;
+    transition: all 0.25s ease-in-out;
+}
+
+nav a:hover::after{
+    width: 50px;
+    background: red;
+}
+
+.diva{
+    display: inline-block;
+    background: blue;
+    height: 50px;
+    width: 50px;
+}
+
+.divb{
+    display: flex;
+    background: orange;
+    height: 150px;
+    width: 150px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+h1{
+    font-size: 48px;
+}
+
+h1,h2{
+    color: #ffc200;
+}
+
+p span{
+    font-weight:bold;
+}
+
+nav{
+    background:lightgray;
+}
+
+ul >li{
+    list-style-type: none;
+    display: inline-block;
+}
+
+nav ul{
+    text-align: center;
+}
+
+nav a:active{
+    color: red;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap:wrap ;
+}
+
+.container > div{
+    height: 300px;
+    width: 300px;
+}
+
+.div1{
+    background: red;
+    margin: 10px;
+}
+
+.div2{
+    background: blue;
+    margin: 10px;
+}
+
+.div3{
+    background: violet;
+    margin: 10px;
+}
+
+
+
+footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+
+}
+
+label{
+    display: inline-block;
+    width: 120px;
+}
+
+form input[type="submit"]{
+    border-radius: 25px;
+    background: yellow;
+    color: aqua;
+}
+
+form input[type="submit"]:hover{
+  background: lightyellow;
+  box-shadow: 2px 2px;
+  animation: monanimation 0.5s infinite alternate;
+}
+
+@keyframes monanimation
+{
+0% { transform: translateX(0px); }
+50% { transform: translateX(150px); }
+100% { transform: translateX(150px) rotate(30deg); }
+}
+
+input[type="text"],input[type="number"],input[type="email"] {
+    width: 300px;
+}
+
+select {
+    width: 308px;
+}
+
+
+nav a{
+    transition: all 2s ease-in;
+}
+
+
+@media screen and (max-width: 600px)
+{
+/* Propriétés CSS pour un écran ne dépassant pas 600px de largeur */
+h1{
+    font-size: 24px;
+    color: darkcyan;
+}
+
+h2{
+    font-size: 15px;
+}
+
+nav{
+    display: none;
+}
+
+
+}

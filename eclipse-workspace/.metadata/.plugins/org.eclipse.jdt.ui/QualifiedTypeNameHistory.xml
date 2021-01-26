@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="fr.formation.dao.ICommandesDaoSql"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="java.sql.Statement"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="java.sql.SQLException"/>
+    <fullyQualifiedTypeName name="fr.adopteunchat.front.UserInput"/>
+    <fullyQualifiedTypeName name="java.lang.NumberFormatException"/>
+    <fullyQualifiedTypeName name="java.util.InputMismatchException"/>
+    <fullyQualifiedTypeName name="fr.adopteunchat.dao.IPersonneDao"/>
+    <fullyQualifiedTypeName name="fr.adopteunchat.dao.sql.PersonneDaoSql"/>
+    <fullyQualifiedTypeName name="fr.adopteunchat.model.Chat"/>
+    <fullyQualifiedTypeName name="fr.adopteunchat.front.ConsoleMenu"/>
+    <fullyQualifiedTypeName name="org.junit.Test"/>
+    <fullyQualifiedTypeName name="fr.formation.science.Maths"/>
+    <fullyQualifiedTypeName name="fr.adopteunchat.model.Personne"/>
+    <fullyQualifiedTypeName name="fr.adopteunchat.service.PersonneService"/>
+    <fullyQualifiedTypeName name="org.junit.Before"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
+    <fullyQualifiedTypeName name="javax.servlet.annotation.WebServlet"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
+    <fullyQualifiedTypeName name="javax.servlet.ServletException"/>
+    <fullyQualifiedTypeName name="java.io.IOException"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="fr.formation.model.Produit"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="javax.servlet.ServletContextListener"/>
+    <fullyQualifiedTypeName name="fr.formation.model.Fournisseur"/>
+</qualifiedTypeNameHistroy>

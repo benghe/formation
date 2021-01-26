@@ -1,0 +1,13 @@
+.bandeauHaut{
+    background-image: url('asset/home-cover-3-bis.jpg');
+    height: 600px;
+    background-position: center;
+    background-size: cover;
+}
+
+
+li[class="nav-item"]{
+    float:right;
+}
+
+
