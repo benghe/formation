@@ -239,3 +239,12 @@
 127.0.0.1 - - [27/Jan/2021:17:58:09 +0100] "GET /formation-jee/categorie-modifier?id=13 HTTP/1.1" 200 454
 127.0.0.1 - - [27/Jan/2021:17:58:20 +0100] "POST /formation-jee/categorie-modifier?id=13 HTTP/1.1" 302 -
 127.0.0.1 - - [27/Jan/2021:17:58:20 +0100] "GET /formation-jee/categories HTTP/1.1" 200 2282
+127.0.0.1 - - [27/Jan/2021:18:12:28 +0100] "GET / HTTP/1.1" 404 751
+127.0.0.1 - - [27/Jan/2021:18:12:46 +0100] "GET /formation-jee/categories HTTP/1.1" 200 2282
+127.0.0.1 - - [27/Jan/2021:18:12:46 +0100] "GET /favicon.ico HTTP/1.1" 404 684
+127.0.0.1 - - [27/Jan/2021:18:12:48 +0100] "GET /formation-jee/categorie-ajout HTTP/1.1" 200 447
+127.0.0.1 - - [27/Jan/2021:18:12:54 +0100] "POST /formation-jee/categorie-ajout HTTP/1.1" 302 -
+127.0.0.1 - - [27/Jan/2021:18:12:54 +0100] "GET /formation-jee/categories HTTP/1.1" 200 2469
+127.0.0.1 - - [27/Jan/2021:18:12:56 +0100] "GET /formation-jee/categorie-modifier?id=14 HTTP/1.1" 200 458
+127.0.0.1 - - [27/Jan/2021:18:13:02 +0100] "POST /formation-jee/categorie-modifier?id=14 HTTP/1.1" 302 -
+127.0.0.1 - - [27/Jan/2021:18:13:02 +0100] "GET /formation-jee/categories HTTP/1.1" 200 2468
