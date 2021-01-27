@@ -16,6 +16,18 @@
 				<input type="text" name="addProductName" id="addProductName">
 			</p>
 			
+			
+			<p>
+				<label for="addProductPrice">Prix du produit à ajouter</label>
+				<input type="text" name="addProductPrice" id="addProductPrice">
+			</p>
+			
+			<p>
+				<label for="addProductStock">Stock du produit à ajouter</label>
+				<input type="text" name="addProductStock" id="addProductStock">
+			</p>
+			
+			
 			<p> 
 			
 			 	<label for="fournisseur">Selectionnez un fournisseur:</label>

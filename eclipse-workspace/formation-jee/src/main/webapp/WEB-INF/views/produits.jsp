@@ -8,17 +8,19 @@
 
 
 	<body>
-		<h3>Liste des produit</h3>
+		<h3>Liste des produits</h3>
 	
 		<a href="produit-ajout"> Ajouter un produit</a>
 		
-		<c:forEach var="produit" items="${ applicationScope['listeProduitsInit'] }" varStatus="produitStatus">
+	<%-- 	<c:forEach var="produit" items="${ applicationScope['listeProduitsInit'] }" varStatus="produitStatus"> --%>
+		 	<%-- <c:forEach var="produit" items="${ produits }" varStatus="produitStatus"> --%>
+		 	<c:forEach var="produit" items="${ produits }">
 			<%-- <p>	${ produit.getNom() } </p> --%>
-			<p>	${ produitStatus.index } - ${ produit.nom } - ${ produit.fournisseur.nom }
+			<p>	${ produit.id } - ${ produit.libelle } - ${ produit.getFournisseur().getNom() }
 			
-				<a href="panier-ajout?id=${ produitStatus.index }"> Ajouter au panier</a>
+				<a href="panier-ajout?id=${ produit.id }"> Ajouter au panier</a>
 				
-				<a href="produit-retrait?id=${ produitStatus.index }"> Retirer le produit</a>
+				<a href="produit-retrait?id=${ produit.id }"> Retirer le produit</a>
 			</p> <!-- Transforme en getNom() grâce aux conventions de nommage -->
 		</c:forEach>
 		

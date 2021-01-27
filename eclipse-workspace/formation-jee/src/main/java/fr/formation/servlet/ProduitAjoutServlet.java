@@ -1,6 +1,7 @@
 package fr.formation.servlet;
 
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 
 import javax.servlet.ServletException;
@@ -9,6 +10,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import fr.formation.dao.IProduitDao;
+import fr.formation.dao.sql.ProduitDaoSql;
 import fr.formation.model.Fournisseur;
 import fr.formation.model.Produit;
 
@@ -17,6 +20,10 @@ public class ProduitAjoutServlet extends HttpServlet{
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		
+
+
 		
 		
 		
@@ -31,19 +38,35 @@ public class ProduitAjoutServlet extends HttpServlet{
 		
 		String nomDuProduit=req.getParameter("addProductName");	
 		String nomDuFournisseur=req.getParameter("fournisseurName");
+		int prixDuProduit= Integer.parseInt(req.getParameter("addProductPrice"));
+		int stockDuProduit=Integer.parseInt(req.getParameter("addProductStock"));
+		
+		
 		
 		//Récupérer le vrai fournisseur avec ce nom dans la liste des fournisseurs??
-		Fournisseur nouveauFournisseur = new Fournisseur(nomDuFournisseur);
+//		Fournisseur nouveauFournisseur = new Fournisseur(nomDuFournisseur);
+		Fournisseur nouveauFournisseur = new Fournisseur();
+		nouveauFournisseur.setId(1);
 		
 		
-		Produit nouveauProduit = new Produit(nomDuProduit,nouveauFournisseur);
+		Produit nouveauProduit = new Produit(nomDuProduit,prixDuProduit, stockDuProduit,nouveauFournisseur);
 		
-		ArrayList<Produit> ListeAugmentee = new ArrayList<Produit>();
+		
 
 		
-		ListeAugmentee=(ArrayList<Produit>) this.getServletContext().getAttribute("listeProduitsInit");
 		
-		ListeAugmentee.add(nouveauProduit);
+//		ArrayList<Produit> ListeAugmentee = new ArrayList<Produit>();
+//
+//		
+//		ListeAugmentee=(ArrayList<Produit>) this.getServletContext().getAttribute("listeProduitsInit");
+//		
+//		ListeAugmentee.add(nouveauProduit);
+		
+		
+		
+		
+		IProduitDao daoProduit=new ProduitDaoSql();
+		req.setAttribute("produits", daoProduit.add(nouveauProduit));
 		
 		
 		//Pas utile car on récupère une référence à listeProduitsInit

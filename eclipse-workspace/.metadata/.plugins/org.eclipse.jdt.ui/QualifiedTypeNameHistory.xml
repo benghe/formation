@@ -25,7 +25,12 @@
     <fullyQualifiedTypeName name="java.io.IOException"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="fr.formation.model.Produit"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="javax.servlet.ServletContextListener"/>
     <fullyQualifiedTypeName name="fr.formation.model.Fournisseur"/>
+    <fullyQualifiedTypeName name="java.lang.ClassNotFoundException"/>
+    <fullyQualifiedTypeName name="java.math.BigDecimal"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="fr.formation.model.Categorie"/>
+    <fullyQualifiedTypeName name="fr.formation.dao.sql.CategorieDaoSql"/>
+    <fullyQualifiedTypeName name="fr.formation.dao.ICategorieDao"/>
 </qualifiedTypeNameHistroy>

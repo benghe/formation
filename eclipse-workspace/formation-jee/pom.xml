@@ -14,7 +14,17 @@
 	</properties>
 
 	<dependencies>
-
+		<dependency>
+		
+					<!-- Groupe du projet -->
+			<groupId>fr.formation</groupId>
+			
+			<!-- Nom du projet -->
+			<artifactId>eshop-java-maven-new</artifactId>
+			
+			<!-- Version du projet -->
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
