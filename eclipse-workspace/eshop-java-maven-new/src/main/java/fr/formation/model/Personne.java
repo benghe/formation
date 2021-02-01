@@ -2,6 +2,7 @@ package fr.formation.model;
 
 import javax.persistence.Column;
 import javax.persistence.DiscriminatorColumn;
+import javax.persistence.DiscriminatorType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,7 +14,7 @@ import javax.persistence.Table;
 @Entity //Obigatoire
 @Table(name="personne") //Pas obligatoire
 @Inheritance(strategy=InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name="PER_TYPE")
+@DiscriminatorColumn(name="PER_TYPE", columnDefinition = "ENUM('C','F')")
 public abstract class Personne {
 	
 	@Id //OBLIGATOIRE UNE FOIS ET UNE SEULE DANS UNE CLASSE ENTITY
