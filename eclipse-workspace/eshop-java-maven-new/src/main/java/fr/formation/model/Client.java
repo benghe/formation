@@ -2,10 +2,20 @@ package fr.formation.model;
 
 import java.time.LocalDate;
 
-public class Client extends Personne {
-	private String password;
-	private LocalDate dateNaissance;
+import javax.persistence.Column;
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
 
+@Entity
+@DiscriminatorValue("C")
+public class Client extends Personne {
+	
+	@Column(name="PER_PASSWORD", length = 300)
+	private String password;
+	
+	@Column(name="PER_DATE_NAISSANCE")
+	private LocalDate dateNaissance;
+	
 	public String getPassword() {
 		return password;
 	}

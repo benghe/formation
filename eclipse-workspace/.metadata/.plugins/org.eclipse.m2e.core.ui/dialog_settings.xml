@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\m2iCGIJAVA\CGIm2iFilRougeMavenJEE"/>
 			<item value="C:\m2iCGIJAVA\CGIm2iFilRougeMaven\adopteunchat-filrouge-maven"/>
 			<item value="C:\m2iCGIJAVA\CGIm2iFilRouge"/>
 			<item value="C:\m2iCGIJAVA\CGIm2iFilRouge\adopteunchat-filrouge\src\fr\adopteunchat\dao\sql\PersonneDaoSql.java"/>
@@ -46,11 +47,13 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="fr.adopteunchat"/>
 			<item value="fr.formation"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="adopteunchat-filrouge-maven-jee"/>
 			<item value="formation-jee"/>
 		</list>
 		<list key="projectNameTemplate">

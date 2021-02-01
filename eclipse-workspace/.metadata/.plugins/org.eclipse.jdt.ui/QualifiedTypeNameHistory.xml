@@ -8,13 +8,10 @@
     <fullyQualifiedTypeName name="fr.adopteunchat.front.UserInput"/>
     <fullyQualifiedTypeName name="java.lang.NumberFormatException"/>
     <fullyQualifiedTypeName name="java.util.InputMismatchException"/>
-    <fullyQualifiedTypeName name="fr.adopteunchat.dao.IPersonneDao"/>
-    <fullyQualifiedTypeName name="fr.adopteunchat.dao.sql.PersonneDaoSql"/>
     <fullyQualifiedTypeName name="fr.adopteunchat.model.Chat"/>
     <fullyQualifiedTypeName name="fr.adopteunchat.front.ConsoleMenu"/>
     <fullyQualifiedTypeName name="org.junit.Test"/>
     <fullyQualifiedTypeName name="fr.formation.science.Maths"/>
-    <fullyQualifiedTypeName name="fr.adopteunchat.model.Personne"/>
     <fullyQualifiedTypeName name="fr.adopteunchat.service.PersonneService"/>
     <fullyQualifiedTypeName name="org.junit.Before"/>
     <fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
@@ -33,4 +30,7 @@
     <fullyQualifiedTypeName name="fr.formation.model.Categorie"/>
     <fullyQualifiedTypeName name="fr.formation.dao.sql.CategorieDaoSql"/>
     <fullyQualifiedTypeName name="fr.formation.dao.ICategorieDao"/>
+    <fullyQualifiedTypeName name="fr.adopteunchat.dao.IPersonneDao"/>
+    <fullyQualifiedTypeName name="fr.adopteunchat.dao.sql.PersonneDaoSql"/>
+    <fullyQualifiedTypeName name="fr.adopteunchat.model.Personne"/>
 </qualifiedTypeNameHistroy>

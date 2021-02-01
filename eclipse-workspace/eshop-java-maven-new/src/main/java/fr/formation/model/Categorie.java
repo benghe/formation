@@ -2,7 +2,15 @@ package fr.formation.model;
 
 import java.util.List;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity //Obigatoire
+@Table(name="categorie") //Pas obligatoire
 public class Categorie {
+	
+	@Id
 	private int id;
 	private String libelle;
 	private Categorie parent;

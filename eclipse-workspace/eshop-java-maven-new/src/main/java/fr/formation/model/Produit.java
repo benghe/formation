@@ -3,6 +3,11 @@ package fr.formation.model;
 import java.math.BigDecimal;
 import java.util.List;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity //Obigatoire
+@Table(name="produit") //Pas obligatoire
 public class Produit {
 	private int id;
 	private String libelle;
