@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import fr.formation.dao.IProduitDao;
+import fr.formation.dao.jpa.ProduitDaoJpa;
 import fr.formation.dao.sql.ProduitDaoSql;
 
 
@@ -33,7 +34,7 @@ public class ProduitServlet extends HttpServlet{
 //		
 //		req.setAttribute("mesProduits", maListedeProduits);
 		
-		IProduitDao daoProduit=new ProduitDaoSql();
+		IProduitDao daoProduit=new ProduitDaoJpa();
 		
 		
 		req.setAttribute("produits", daoProduit.findAll());

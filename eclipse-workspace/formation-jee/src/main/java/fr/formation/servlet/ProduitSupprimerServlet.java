@@ -1,7 +1,6 @@
 package fr.formation.servlet;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,8 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import fr.formation.dao.IProduitDao;
-import fr.formation.dao.sql.ProduitDaoSql;
-import fr.formation.model.Produit;
+import fr.formation.dao.jpa.ProduitDaoJpa;
 
 @WebServlet(value = "/produit-retrait")
 public class ProduitSupprimerServlet extends HttpServlet{
@@ -20,7 +18,7 @@ public class ProduitSupprimerServlet extends HttpServlet{
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		int idProduitARetirer=Integer.parseInt(req.getParameter("id"));
 		
-		IProduitDao daoProduit=new ProduitDaoSql();
+		IProduitDao daoProduit=new ProduitDaoJpa();
 		req.setAttribute("produits", daoProduit.deleteById(idProduitARetirer));
 		
 		

@@ -16,34 +16,34 @@ import javax.persistence.Transient;
 @Entity
 @Table(name = "commentaire")
 public class Commentaire {
-	
-	@Id //OBLIGATOIRE UNE FOIS ET UNE SEULE DANS UNE CLASSE ENTITY
-	@GeneratedValue(strategy = GenerationType.IDENTITY) //STRATEGIE D'AUTO-INCREMENT SUR CET ID
-	@Column(name="COM_ID") // OPTIONNEL SI LE NOM DU CHAMP = LE NOM DE L'ATTRIBUT
+
+	@Id // OBLIGATOIRE UNE FOIS ET UNE SEULE DANS UNE CLASSE ENTITY
+	@GeneratedValue(strategy = GenerationType.IDENTITY) // STRATEGIE D'AUTO-INCREMENT SUR CET ID
+	@Column(name = "COM_ID") // OPTIONNEL SI LE NOM DU CHAMP = LE NOM DE L'ATTRIBUT
 	private int id;
-	
-	@Column(name = "COM_TEXTE", nullable=false, columnDefinition = "TEXT")
-	@Lob //Pas obligatoire, mais pour préciser à hibernate que c'est un grand texte
+
+	@Column(name = "COM_TEXTE", nullable = false, columnDefinition = "TEXT")
+	@Lob // Pas obligatoire, mais pour préciser à hibernate que c'est un grand texte
 	private String texte;
-	
-	@Column(name = "COM_ANONYMOUS", nullable=false)
+
+	@Column(name = "COM_ANONYMOUS", nullable = false)
 	private boolean anonymous;
-	
+
 	@Column(name = "COM_DATE", nullable = false)
 	private LocalDateTime date;
-	
+
+	//@ManyToOne
+	//@JoinColumn(name = "COM_CLIENT_ID", nullable = false)
 	@Transient
-	@ManyToOne
-	@JoinColumn(name="COM_CLIENT_ID",nullable=false)
 	private Client client;
-	
+
+	//@ManyToOne
+	//@JoinColumn(name = "COM_COMMANDE_ID", nullable = false)
 	@Transient
-	@ManyToOne
-	@JoinColumn(name="COM_COMMANDE_ID",nullable=false)
 	private Commande commande;
-	
+
 	@ManyToOne
-	@JoinColumn(name="COM_PRODUIT_ID",nullable=false)
+	@JoinColumn(name = "COM_PRODUIT_ID", nullable = false)
 	private Produit produit;
 
 	public int getId() {

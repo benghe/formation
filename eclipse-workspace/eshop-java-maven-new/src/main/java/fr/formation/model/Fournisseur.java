@@ -30,6 +30,14 @@ public class Fournisseur extends Personne {
 	}
 	
 	
+	public List<Produit> getProduits() {
+		return produits;
+	}
+
+	public void setProduits(List<Produit> produits) {
+		this.produits = produits;
+	}
+
 	public Fournisseur() {}
 	
 	

@@ -16,6 +16,8 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
+
+
 @Entity //Obigatoire
 @Table(name="produit") //Pas obligatoire
 public class Produit {
@@ -42,11 +44,11 @@ public class Produit {
 	@JoinColumn(name ="PRO_FOURNISSEUR_ID")
 	private Fournisseur fournisseur;
 	
-	
-	@ManyToMany
-	@JoinTable(name="produit_categorie",
-			joinColumns=@JoinColumn(name="PRCA_PRODUIT_ID", referencedColumnName="PRO_ID"),
-			inverseJoinColumns=@JoinColumn(name="PRCA_CATEGORIE_ID", referencedColumnName="CAT_ID"))
+	@ManyToMany(mappedBy="produits")
+//	@ManyToMany
+//	@JoinTable(name="produit_categorie",
+//			joinColumns=@JoinColumn(name="PRCA_PRODUIT_ID", referencedColumnName="PRO_ID"),
+//			inverseJoinColumns=@JoinColumn(name="PRCA_CATEGORIE_ID", referencedColumnName="CAT_ID"))
 	private List<Categorie> categories;
 	
 	@OneToMany(mappedBy="produit")

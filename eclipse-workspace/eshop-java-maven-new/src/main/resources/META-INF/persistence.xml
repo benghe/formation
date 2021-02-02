@@ -8,10 +8,12 @@
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 		<class>fr.formation.model.Personne</class>
 		<class>fr.formation.model.Fournisseur</class>
+		<class>fr.formation.model.Client</class>
 		<class>fr.formation.model.Categorie</class>
 		<class>fr.formation.model.Produit</class>
 		<class>fr.formation.model.Paiement</class>
  		<class>fr.formation.model.Commentaire</class>
+ 		<class>fr.formation.model.Commande</class>
 
 		<!-- Listes des propriétés liées à l’implémentation (Hibernate, OpenJPA, 
 			...) -->

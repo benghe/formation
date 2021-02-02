@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import fr.formation.dao.IProduitDao;
+import fr.formation.dao.jpa.ProduitDaoJpa;
 import fr.formation.dao.sql.ProduitDaoSql;
 import fr.formation.model.Fournisseur;
 import fr.formation.model.Produit;
@@ -21,12 +22,7 @@ public class ProduitAjoutServlet extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-		
 
-
-		
-		
-		
 		this.getServletContext() //On récupère le contexte de Servlet
 		.getRequestDispatcher("/WEB-INF/views/produit-ajout.jsp") //On récupère le dispatcher
 		.forward(req, resp); // On transfert avec request et response
@@ -65,7 +61,7 @@ public class ProduitAjoutServlet extends HttpServlet{
 		
 		
 		
-		IProduitDao daoProduit=new ProduitDaoSql();
+		IProduitDao daoProduit=new ProduitDaoJpa();
 		req.setAttribute("produits", daoProduit.add(nouveauProduit));
 		
 		

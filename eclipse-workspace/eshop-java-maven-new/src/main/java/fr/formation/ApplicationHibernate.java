@@ -20,21 +20,22 @@ import fr.formation.model.Categorie;
 import fr.formation.model.Commentaire;
 import fr.formation.model.Fournisseur;
 import fr.formation.model.Paiement;
+import fr.formation.model.Produit;
 
 public class ApplicationHibernate {
 
 	public static void main(String[] args) {
-		EntityManagerFactory emf= Persistence.createEntityManagerFactory("EShopUnit");
-		EntityManager em =emf.createEntityManager();
+//		EntityManagerFactory emf= Persistence.createEntityManagerFactory("EShopUnit");
+//		EntityManager em =emf.createEntityManager();
 		
 		
 		//Ajouter une nouvelle catégorie et lister toutes les catégories
 		
-		Categorie nouvelCat=new Categorie();
-		
-		nouvelCat.setLibelle("tshirts moulants");
-		
-		EntityTransaction tx = em.getTransaction();
+//		Categorie nouvelCat=new Categorie();
+//		
+//		nouvelCat.setLibelle("tshirts moulants");
+//		
+//		EntityTransaction tx = em.getTransaction();
 		
 //		tx.begin();
 //		em.persist(nouvelCat);
@@ -43,12 +44,12 @@ public class ApplicationHibernate {
 //		List <Categorie> categories = em.createQuery("select c from Categorie c",Categorie.class).getResultList();
 		
 		
-		ICategorieDao daoCategorie = new CategorieDaoJpa();
-		
-		List <Categorie> categories = daoCategorie.findAll();
-		 for(Categorie c:categories) {
-			 System.out.println(c.getLibelle());
-		 }
+//		ICategorieDao daoCategorie = new CategorieDaoJpa();
+//		
+//		List <Categorie> categories = daoCategorie.findAll();
+//		 for(Categorie c:categories) {
+//			 System.out.println(c.getLibelle());
+//		 }
 		
 		 
 		 
@@ -56,27 +57,38 @@ public class ApplicationHibernate {
 		 
 		 
 		IFournisseurDao daoFournisseur = new FournisseurDaoJpa();
-		List <Fournisseur> fournisseurs = daoFournisseur.findAll();
-		 for(Fournisseur f:fournisseurs) {
-			 System.out.println(f.getNom());
-		 }
+//		List <Fournisseur> fournisseurs = daoFournisseur.findAll();
+//		 for(Fournisseur f:fournisseurs) {
+//			 System.out.println(f.getNom());
+//			 System.out.println("- LISTE DE SES PRODUITS -");
+//			 for(Produit p:f.getProduits()) {
+//				 System.out.println("- " + p.getLibelle());
+//			 }
+//		 }
+		 System.out.println(daoFournisseur.findById(4).getNom());
 		 
-		 for (Fournisseur f:daoFournisseur.findAll()) {
-			 System.out.println(f.getNom());
-		 }
-		
+		 System.out.println(daoFournisseur.count());
 		 
-		 IPaiementDao daoPaiement = new PaiementDaoJpa();
-		 List<Paiement> paiements = daoPaiement.findAll();
-		 for(Paiement p:paiements) {
-			 System.out.println(p.getType());
-		 }
+		 System.out.println(daoFournisseur.findAllFetchingProduits());
+//		 
+//		 daoFournisseur.deleteById(3);
 		 
-		 ICommentaireDao daoCommentaire = new CommentaireDaoJpa();
-		 List<Commentaire> commentaires = daoCommentaire.findAll();
-		 for(Commentaire co:commentaires) {
-			 System.out.println(co.getTexte());
-		 }
+//		 for (Fournisseur f:daoFournisseur.findAll()) {
+//			 System.out.println(f.getNom());
+//		 }
+//		
+//		 
+//		 IPaiementDao daoPaiement = new PaiementDaoJpa();
+//		 List<Paiement> paiements = daoPaiement.findAll();
+//		 for(Paiement p:paiements) {
+//			 System.out.println(p.getType());
+//		 }
+//		 
+//		 ICommentaireDao daoCommentaire = new CommentaireDaoJpa();
+//		 List<Commentaire> commentaires = daoCommentaire.findAll();
+//		 for(Commentaire co:commentaires) {
+//			 System.out.println(co.getTexte());
+//		 }
 		
 		
 		
@@ -90,6 +102,8 @@ public class ApplicationHibernate {
 //		fournisseur.setAdresse("12, rue des champs, 59000, LILLE");
 //		fournisseur.setSiret("12345678912345");
 //		
+//		daoFournisseur.add(fournisseur);
+		
 //		//On a besoin d'une transaction lorsque l'on applique un changement (donc pas pour le find)
 //		EntityTransaction tx = em.getTransaction();
 //		tx.begin();
@@ -100,7 +114,7 @@ public class ApplicationHibernate {
 ////		tx.rollback(); //On annule les changement SQL (l'insert ne se fera pas)
 //		
 ////		em.getTransaction().commit(); //Autre manière de faire
-//		
+		
 		
 		
 		

@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
@@ -30,11 +31,17 @@ public class Categorie {
 	@JoinColumn(name="CAT_PARENT_ID")
 	private Categorie parent;
 	
-	@OneToMany(mappedBy ="parent" ) //relation esclave (mappé sur le nom de l'attribut de la relation inverse qui est ici "parent")
+	@OneToMany(mappedBy ="parent") //relation esclave (mappé sur le nom de l'attribut de la relation inverse qui est ici "parent")
 	private List<Categorie> enfants;
 	
 	
-	@ManyToMany(mappedBy="categories")
+	//@ManyToMany(mappedBy="categories")
+	@ManyToMany
+	@JoinTable(
+		name = "produit_categorie",
+		joinColumns = @JoinColumn(name = "PRCA_CATEGORIE_ID", referencedColumnName = "CAT_ID"),
+		inverseJoinColumns = @JoinColumn(name = "PRCA_PRODUIT_ID", referencedColumnName = "PRO_ID")
+	)
 	private List<Produit> produits;
 
 	public int getId() {
